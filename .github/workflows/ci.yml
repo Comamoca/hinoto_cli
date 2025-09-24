@@ -31,7 +31,7 @@ jobs:
         run: gleam check
 
       - name: Check formatting
-        run: gleam format --check src test example
+        run: gleam format --check src test
 
       - name: Run tests
         run: gleam test
