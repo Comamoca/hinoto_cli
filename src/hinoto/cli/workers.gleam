@@ -26,7 +26,7 @@ main = \"{{main}}\"
 compatibility_date = \"{{compatibility_date}}\"
 
 [build]
-command = \"gleam build\"
+command = \"gleam build --javascript\"
 "
 
 const entory_point = "
@@ -128,7 +128,7 @@ pub fn overwrite_main_program(project_name, main_path) {
       let assert Ok(Nil) = simplifile.write(main_path, minimum_handler())
       io.println("📝 Writing entory main program...")
     }
-    False -> io.println("❌ Cancel to writing entory program...")
+    False -> io.println("❌ Cancel to writing entry program...")
   }
 }
 
