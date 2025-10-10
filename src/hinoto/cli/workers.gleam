@@ -26,7 +26,7 @@ main = \"{{main}}\"
 compatibility_date = \"{{compatibility_date}}\"
 
 [build]
-command = \"gleam build --javascript\"
+command = \"gleam build --target javascript\"
 "
 
 const entory_point = "
