@@ -29,7 +29,7 @@ compatibility_date = \"{{compatibility_date}}\"
 command = \"gleam build --target javascript\"
 "
 
-const entory_point = "
+const entry_point = "
 import * as hinoto from '../hinoto/hinoto.mjs';
 import { main } from './{{name}}.mjs';
 
@@ -62,9 +62,9 @@ pub fn wrangler_toml_tempalte(name: String, main: String) {
   Ok(string_tree.to_string(toml_text))
 }
 
-pub fn workers_entory_point(name: String) {
-  io.println("❇️ Generate entory point script...")
-  let assert Ok(template) = handles.prepare(entory_point |> string.trim_start)
+pub fn workers_entry_point(name: String) {
+  io.println("❇️ Generate entry point script...")
+  let assert Ok(template) = handles.prepare(entry_point |> string.trim_start)
   let context = ctx.Dict([ctx.Prop("name", ctx.Str(name))])
 
   use toml_text <- result.try(handles.run(template, context, []))
@@ -72,7 +72,7 @@ pub fn workers_entory_point(name: String) {
 }
 
 pub fn minimum_handler() {
-  io.println("❇️ Generate entory point script...")
+  io.println("❇️ Generate entry point script...")
   minimul_hander |> string.trim_start
 }
 
@@ -85,8 +85,8 @@ pub fn generate_wrangler_config(project_name) {
   |> snag.map_error(describe_handles_error)
 }
 
-pub fn generate_entory_point(project_name) {
-  workers_entory_point(project_name)
+pub fn generate_entry_point(project_name) {
+  workers_entry_point(project_name)
   |> snag.map_error(describe_handles_error)
 }
 
@@ -126,7 +126,7 @@ pub fn overwrite_main_program(project_name, main_path) {
   case result {
     True -> {
       let assert Ok(Nil) = simplifile.write(main_path, minimum_handler())
-      io.println("📝 Writing entory main program...")
+      io.println("📝 Writing entry main program...")
     }
     False -> io.println("❌ Cancel to writing entry program...")
   }
