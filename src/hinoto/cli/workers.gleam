@@ -16,7 +16,7 @@ const project_config = "gleam.toml"
 
 pub const wrangler_file_name = "wrangler.toml"
 
-pub const workers_entry_point = "index.js"
+pub const workers_entry_file = "index.js"
 
 const compatibility_date = "2023-09-22"
 
@@ -79,7 +79,7 @@ pub fn minimum_handler() {
 pub fn generate_wrangler_config(project_name) {
   let main =
     filepath.join("build/dev/javascript", project_name)
-    |> filepath.join(workers_entry_point)
+    |> filepath.join(workers_entry_file)
 
   wrangler_toml_tempalte(project_name, main)
   |> snag.map_error(describe_handles_error)
