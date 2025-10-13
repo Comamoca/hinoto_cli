@@ -2,7 +2,7 @@ import argv
 import clip.{type Command}
 import clip/help
 import gleam/io
-import hinoto/cli/command
+import hinoto/internal/cli/command
 
 type Args {
   Init

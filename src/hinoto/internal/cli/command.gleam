@@ -3,7 +3,7 @@ import gleam/io
 import gleam/javascript/promise
 import gleam/result
 import gleam_community/ansi
-import hinoto/cli/workers
+import hinoto/internal/cli/workers
 import simplifile
 
 pub fn workers_init() {
