@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This repository is archived. `hinoto_cli` has been merged into the [hinoto](https://github.com/Comamoca/hinoto) repository.
+> Please use [Comamoca/hinoto](https://github.com/Comamoca/hinoto) instead.
+
 <div align="center">
 
 ![Last commit](https://img.shields.io/github/last-commit/Comamoca/hinoto_cli?style=flat-square)
